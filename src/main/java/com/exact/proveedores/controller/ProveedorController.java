@@ -12,7 +12,7 @@ import com.exact.proveedores.entity.Proveedor;
 import com.exact.proveedores.services.interfaces.IProveedorService;
 
 @RestController
-@RequestMapping("/proveedor")
+@RequestMapping("/proveedores")
 public class ProveedorController {
 	
 	@Autowired
