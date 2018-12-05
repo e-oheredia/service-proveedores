@@ -18,5 +18,10 @@ public class ProveedorService implements IProveedorService{
 	public Iterable<Proveedor> listarAll() {
 		return proveedordao.findAll();
 	}
+	
+	@Override
+	public Proveedor listarById(Long id) {
+		return proveedordao.findById(id).orElse(null);
+	}
 
 }

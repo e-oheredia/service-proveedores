@@ -7,5 +7,6 @@ public interface IProveedorService {
 
 	public Iterable<Proveedor> listarAll();
 	
+	public Proveedor listarById(Long id);
 }
 
