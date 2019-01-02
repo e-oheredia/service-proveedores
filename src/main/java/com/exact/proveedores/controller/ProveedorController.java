@@ -29,5 +29,6 @@ public class ProveedorController {
 		Proveedor proveedor = proveedorservice.listarById(id);
 		return new ResponseEntity<Proveedor>(proveedor, proveedor == null ? HttpStatus.NOT_FOUND : HttpStatus.OK);
 	}
+	
 
 }
