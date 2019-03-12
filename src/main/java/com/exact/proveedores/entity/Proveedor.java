@@ -23,12 +23,15 @@ public class Proveedor implements Serializable{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="proveedor_id")
 	private Long id;
-		
+	@Column(nullable=false)	
 	private String nombre;
 	
 	@ManyToOne(optional=false)
 	@JoinColumn(name="tipo_proveedor_id")
 	private TipoProveedor tipoproveedor;
+	
+	@Column(nullable=false)
+	private boolean activo;
 
 	public Long getId() {
 		return id;
@@ -53,5 +56,14 @@ public class Proveedor implements Serializable{
 	public void setTipoproveedor(TipoProveedor tipoproveedor) {
 		this.tipoproveedor = tipoproveedor;
 	}
+
+	public boolean isActivo() {
+		return activo;
+	}
+
+	public void setActivo(boolean activo) {
+		this.activo = activo;
+	}
+	
 	
 }

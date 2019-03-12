@@ -24,4 +24,9 @@ public class ProveedorService implements IProveedorService{
 		return proveedordao.findById(id).orElse(null);
 	}
 
+	@Override
+	public Proveedor guardar(Proveedor proveedor) {
+		return proveedordao.save(proveedor);
+	}
+
 }
