@@ -6,12 +6,13 @@ SET IDENTITY_INSERT [dbo].[tipo_proveedor] OFF
 
 
 SET IDENTITY_INSERT [dbo].[proveedor] ON 
-INSERT [dbo].[proveedor] ([proveedor_id], [nombre],[tipo_proveedor_id]) VALUES (1, 'DOCFLOW',1)
-INSERT [dbo].[proveedor] ([proveedor_id], [nombre],[tipo_proveedor_id]) VALUES (2, 'URBANO',1)
+INSERT [dbo].[proveedor] ([proveedor_id], [activo], [nombre],[tipo_proveedor_id]) VALUES (1, 1, 'DOCFLOW',1)
+INSERT [dbo].[proveedor] ([proveedor_id], [activo], [nombre],[tipo_proveedor_id]) VALUES (2, 1, 'URBANO',1)
 SET IDENTITY_INSERT [dbo].[proveedor] OFF 
 
 SET IDENTITY_INSERT [dbo].[empleado] ON 
 INSERT [dbo].[empleado] ([empleado_id], [nombres], [matricula], [proveedor_id]) VALUES (1, 'ROBERTO DAVILA', 'RDAVILA',1)
+INSERT [dbo].[empleado] ([empleado_id], [nombres], [matricula], [proveedor_id]) VALUES (2, 'PEDRO ROJAS', 'PROJAS',2)
 SET IDENTITY_INSERT [dbo].[empleado] OFF 
 
  

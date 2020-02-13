@@ -19,8 +19,10 @@ public class Empleado implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="empleado_id")
-	private Long id;	
+	private Long id;
+	@Column(nullable=false)
 	private String nombres;
+	@Column(nullable=false)
 	private String matricula;
 	@ManyToOne(optional=false)
 	@JoinColumn(name="proveedor_id")
